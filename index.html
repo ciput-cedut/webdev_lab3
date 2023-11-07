@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+          body{
+            background-color: aliceblue;
+             background-image: url("wallhaven-72rxqo.jpg");
+          }
+
+
+        table {
+          border: 0.5px solid black;
+          border-collapse: collapse;
+          width: 600px;
+          height: 700px;
+        }
+        th {
+            border: 0.5px solid black;
+        }
+        td{
+            border: 0.5px solid black;
+        }
+
+        .myDiv {
+        border: 5px outset ;
+         background-color: #1F2833;    
+         text-align: center;
+        }
+
+        .head1 {
+          padding: 35px;
+          text-align: center;
+          background: #02433c;
+          color: white;
+        font-size: 60px;   
+        }
+        .container-button {
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
+          grid-template-rows: 1fr 1fr;
+          grid-template-areas: "bt-1 bt-2 bt-3"
+          "bt-4 bt-5 bt-6";
+          position: relative;
+          perspective: 800;
+          padding: 0;
+          width: 135px;
+          height: 47px;
+          transition: all 0.3s ease-in-out;
+}
+
+.container-button:active {
+  transform: scale(0.95);
+}
+
+.hover {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+}
+
+.bt-1 {
+  grid-area: bt-1;
+}
+
+.bt-2 {
+  grid-area: bt-2;
+}
+
+.bt-3 {
+  grid-area: bt-3;
+}
+
+.bt-4 {
+  grid-area: bt-4;
+}
+
+.bt-5 {
+  grid-area: bt-5;
+}
+
+.bt-6 {
+  grid-area: bt-6;
+}
+
+.bt-1:hover ~ button {
+  transform: rotateX(15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px -2px #18181888;
+}
+
+.bt-1:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px -2px #18181888;
+}
+
+.bt-3:hover ~ button {
+  transform: rotateX(15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px -2px #18181888;
+}
+
+.bt-3:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px -2px #18181888;
+}
+
+.bt-4:hover ~ button {
+  transform: rotateX(-15deg) rotateY(-15deg) rotateZ(0deg);
+  box-shadow: -2px 2px #18181888;
+}
+
+.bt-4:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: -2px 2px #18181888;
+}
+
+.bt-6:hover ~ button {
+  transform: rotateX(-15deg) rotateY(15deg) rotateZ(0deg);
+  box-shadow: 2px 2px #18181888;
+}
+
+.bt-6:hover ~ button::after {
+  animation: shake 0.5s ease-in-out 0.3s;
+  text-shadow: 2px 2px #18181888;
+}
+
+.hover:hover ~ button::before {
+  background: transparent;
+}
+
+.hover:hover ~ button::after {
+  content: "Click";
+  top: -150%;
+  transform: translate(-50%, 0);
+  font-size: 34px;
+  color: #f19c2b;
+}
+
+button {
+  position: absolute;
+  padding: 0;
+  width: 135px;
+  height: 47px;
+  background: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  border: 3px solid #f39923;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: #f5ae51;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: -1;
+}
+
+button::after {
+  content: "Hover";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 135px;
+  height: 47px;
+  background-color: transparent;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 47px;
+  color: #ffffff;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.3s ease-in-out;
+  z-index: 2;
+}
+
+@keyframes shake {
+  0% {
+    left: 45%;
+  }
+
+  25% {
+    left: 54%;
+  }
+
+  50% {
+    left: 48%;
+  }
+
+  75% {
+    left: 52%;
+  }
+
+  100% {
+    left: 50%;
+  }
+}
+    </style>
+        </head>
+        <body>
+            
+        <h1 class="head1" align="center">My Biodata</h1>
+        </div>
+        
+        <table width="450" align="center">
+          <tr bgcolor="white">
+            <th>Name</th>
+            <td>Firas Arfa Bin Abdul Majid</td>
+            <th><img width="150px" height="160px" src="IMG_20230608_140240.jpg" alt="" ></th>
+          </tr>
+          <tr bgcolor="white">
+            <th>Date of Birth</th>
+            <td colspan="2">23 April 2001</td>
+          </tr>
+
+          <tr bgcolor="white">
+            <th>Religion</th>
+            <td colspan="2">Islam</td>
+          </tr>
+
+          <tr bgcolor="white"> 
+            <th>Race</th>
+            <td colspan="2">Malay</td>
+          </tr>
+
+          <tr bgcolor="white">
+            <th rowspan="5">Address</th>
+            <tr bgcolor="white"><th style="text-align: left;">Street</th>
+            <td style="width: 200px;">No.4 Lengkok Sungai Pari</td></tr>
+            <tr bgcolor="white"><th style="text-align: left;">Town</td><td>Ipoh</td></tr>
+            <tr bgcolor="white"><th style="text-align: left;">District</th><td>Kinta</td></tr>
+            <tr bgcolor="white"><th style="text-align: left;">State</th><td>Perak</td></tr>
+      </tr>
+
+      <tr bgcolor="white">
+        <th rowspan="4">Contact</th>
+            <tr bgcolor="white"><th style="text-align: left;">Mobile Phone</td>
+            <td>+60175710086</td></tr>
+            <tr bgcolor="white"><th style="text-align: left;">Social Media</td><td>None</td></tr>
+            <tr bgcolor="white"><th style="text-align: left;">Website</th><td>None</td></tr>
+      </tr>
+
+    <tr bgcolor="white">
+        <th>Course and Institution</th>
+        <td colspan="2">Bachelor Degree in Software Engineering UTHM</td>
+    </tr>
+
+    <tr bgcolor="white">
+        <th>Programming Skills</th>
+        <td colspan="2">
+          <li style="list-style-type:square">C</li>
+          <li style="list-style-type:square">C++</li>
+          <li style="list-style-type:square">HTML</li>
+        </td>
+    </tr>
+
+    <tr bgcolor="white">
+        <th>Personal Interest</th>
+        <td colspan="2">
+          <li>Cars</li>
+          <li>Football</li>
+        </td>
+    </tr>
+
+    <tr bgcolor="white">
+    <th>My Hobby</th>
+    <td colspan="2">
+      <li>Playing Football</li>  
+      <li>Playing Games</li>
+      </td>
+    </tr>
+
+    <tr bgcolor="white">
+        <th>Future Plan in 2024</th>
+        <td colspan="2">Become an expert in programming</td>
+    </tr>
+
+    </table>
+    <a href="hobby.html">
+    <div class="container-button">
+      <div class="hover bt-1"></div>
+      <div class="hover bt-2"></div>
+      <div class="hover bt-3"></div>
+      <div class="hover bt-4"></div>
+      <div class="hover bt-5"></div>
+      <div class="hover bt-6"></div>
+      <button></button>
+    </div>
+    </a>  
+     
+    </body>
+</html>
